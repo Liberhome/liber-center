@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: liber-center
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/liberhome-universe
+    username: root
+    password: 6050-Mysql
+server:
+  port: 8080
