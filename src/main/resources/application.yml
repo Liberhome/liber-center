@@ -8,3 +8,6 @@ spring:
     password: 6050-Mysql
 server:
   port: 8080
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
