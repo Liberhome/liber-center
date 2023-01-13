@@ -1,9 +1,7 @@
 package com.liberhome.liber_center.model.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
@@ -73,6 +71,7 @@ public class User implements Serializable {
     /**
      * 是否已删除
      */
+    @TableLogic
     private Integer isDelete;
 
     @TableField(exist = false)

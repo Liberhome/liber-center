@@ -17,11 +17,11 @@ class UserServiceTest {
     @Test
     void testAdduser() {
         User user = new User();
-        user.setUsername("liber");
-        user.setUserAccount("123");
+        user.setUsername("leoleo");
+        user.setUserAccount("leoleoleo");
         user.setAvatarUrl("https://avatar-static.segmentfault.com/274/037/2740371703-61baf9dec42e4_huge256");
         user.setGender(0);
-        user.setUserPassword("xxx");
+        user.setUserPassword("12345678");
         user.setPhone("123");
         user.setEmail("456");
         boolean res = userService.save(user);
@@ -31,10 +31,9 @@ class UserServiceTest {
 
     @Test
     void userRegister() {
-        String userAccount = "liber";
+        String userAccount = "liberhome";
         String userPassword = "";
         String checkPassword = "123456";
-        String planetCode = "1";
         long result = userService.userRegister(userAccount, userPassword, checkPassword);
         Assertions.assertEquals(-1, result);
         userAccount = "li";
@@ -51,7 +50,8 @@ class UserServiceTest {
         checkPassword = "123456789";
         result = userService.userRegister(userAccount, userPassword, checkPassword);
         Assertions.assertEquals(-1, result);
-        userAccount = "big liber";
+        userAccount = "lllllllokaka";
+        userPassword = "12345678";
         checkPassword = "12345678";
         result = userService.userRegister(userAccount, userPassword, checkPassword);
         Assertions.assertEquals(-1, result);
